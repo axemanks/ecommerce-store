@@ -1,4 +1,4 @@
-// Types for the app
+// Types for the frontend
 
 export interface Product {
     id: string;
