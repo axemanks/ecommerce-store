@@ -1,21 +1,21 @@
-// This action will get the categories
-import qs from "query-string";
+// This action will get products in the same categories
+
 import { Product } from "@/types";
+import qs from "query-string";
+
+const URL=`${process.env.NEXT_PUBLIC_API_URL}/products`;
 
 interface Query {
   categoryId?: string;
   colorId?: string;
   sizeId?: string;
   isFeatured?: boolean;
-};
+}
 
-const URL=`${process.env.NEXT_PUBLIC_API_URL}/products`;
-
-const getProducts = async (query:Query): Promise<Product[]> => {
-
+const getProducts = async (query: Query): Promise<Product[]> => {
   const url = qs.stringifyUrl({
     url: URL,
-    query: {
+    query: { 
       colorId: query.colorId,
       sizeId: query.sizeId,
       categoryId: query.categoryId,
@@ -23,7 +23,7 @@ const getProducts = async (query:Query): Promise<Product[]> => {
     },
   });
 
-  const res = await fetch(URL);
+  const res = await fetch(url);
 
   return res.json();
 };
