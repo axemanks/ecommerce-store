@@ -31,13 +31,13 @@ const MainNav: React.FC<MainNavProps> = ({
             {/* iterate over routes */}
             {routes.map((route) => (
         <Link
-          key={route.href}
-          href={route.href}
-          className={cn(
-            'text-sm font-medium transition-colors hover:text-primary',
-            route.active ? 'text-black dark:text-white' : 'text-muted-foreground'
-          )}
-        >
+        key={route.href}
+        href={route.href}
+        className={cn(
+          'text-sm font-medium transition-colors hover:text-black',
+          route.active ? 'text-blue-600' : 'text-neutral-500'
+        )}
+      >
           {route.label}
       </Link>
       ))}
