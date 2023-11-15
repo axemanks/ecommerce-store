@@ -12,3 +12,5 @@ headless ui - modals - https://headlessui.com/
 lucide-react - icons
 ShadCN - UI
 date-fns - date formatting
+react-hot-toast - Notifications
+axios - fetch data
