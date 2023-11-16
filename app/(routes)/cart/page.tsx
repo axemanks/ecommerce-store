@@ -13,6 +13,7 @@ import Summary from './components/summary';
 export const revalidate = 0;
 
 const CartPage = () => {
+  // Hydration Trick
   const [isMounted, setIsMounted] = useState(false);
   const cart = useCart();
 
@@ -23,7 +24,8 @@ const CartPage = () => {
   if (!isMounted) {
     return null;
   }
-
+  // End Hydration Trick
+  
   return (
     <div className="bg-white">
       <Container>

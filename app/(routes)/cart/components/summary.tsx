@@ -1,4 +1,3 @@
-// Order summary
 "use client";
 
 import axios from "axios";
@@ -15,7 +14,6 @@ const Summary = () => {
   const items = useCart((state) => state.items);
   const removeAll = useCart((state) => state.removeAll);
 
-  // After checkout the user will be directed back to the summary - check if the payment was successful
   useEffect(() => {
     if (searchParams.get('success')) {
       toast.success('Payment completed.');
@@ -23,16 +21,14 @@ const Summary = () => {
     }
 
     if (searchParams.get('canceled')) {
-      toast.error('Something went wrong.');
+      toast.error('Checkout was NOT successful.');
     }
   }, [searchParams, removeAll]);
 
-  // Calculate total price
   const totalPrice = items.reduce((total, item) => {
     return total + Number(item.price)
   }, 0);
 
-  // Checkout
   const onCheckout = async () => {
     const response = await axios.post(`${process.env.NEXT_PUBLIC_API_URL}/checkout`, {
       productIds: items.map((item) => item.id)
@@ -50,12 +46,10 @@ const Summary = () => {
       </h2>
       <div className="mt-6 space-y-4">
         <div className="flex items-center justify-between border-t border-gray-200 pt-4">
-            {/* Total price */}
           <div className="text-base font-medium text-gray-900">Order total</div>
          <Currency value={totalPrice} />
         </div>
       </div>
-      {/* Checkout */}
       <Button onClick={onCheckout} disabled={items.length === 0} className="w-full mt-6">
         Checkout
       </Button>
