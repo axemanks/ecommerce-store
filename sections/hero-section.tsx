@@ -23,7 +23,7 @@ const HeroSection = () => {
 
           <div className='w-full flex flex-row h-full'>
             {/* Left */}
-            <div className='w-1/2 '>
+            <div className='w-1/2 flex flex-col justify-between'>
               <h1 className='text-5xl font-bold text-gray-800 '>
                 <span>Colonial Jewelery </span>
                 <span className='text-red-500'>& Pawn</span>
@@ -37,7 +37,7 @@ const HeroSection = () => {
               </p>
               <br />
               {/* Shop Now button */}
-              <Button className='bg-blue-500'>
+              <Button className='bg-blue-500 mx-auto'>
                 Shop Now in store or Online!
                 <ArrowRight
                   className='ml-2'
