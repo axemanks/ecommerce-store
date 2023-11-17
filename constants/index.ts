@@ -2,22 +2,22 @@
 
 
 import { customer1, customer2 } from "@/public/images";
-
+import { ShoppingBag, Lock, HelpCircle } from 'lucide-react';
 
 
 export const services = [
     {
-        imgURL: "",
+        icon: ShoppingBag,
         label: "Free shipping",
         subtext: "Enjoy seamless shopping with our complimentary shipping service."
     },
     {
-        imgURL: "",
+        icon: Lock,
         label: "Secure Payment",
         subtext: "Experience worry-free transactions with our secure payment options."
     },
     {
-        imgURL: "",
+        icon: HelpCircle,
         label: "Love to help you",
         subtext: "Our dedicated team is here to assist you every step of the way."
     },

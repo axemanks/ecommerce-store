@@ -6,7 +6,7 @@ import Container from "@/components/ui/container"
 const Subscribe = () => {
     return (
       <section 
-      className="flex justify-between items-center max-lg:flex-col gap-10 border-t" 
+      className="flex justify-between items-center max-lg:flex-col gap-10 border-t " 
       id="contact"
       >
         <Container >

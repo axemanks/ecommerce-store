@@ -6,7 +6,10 @@ import ProductList from '@/components/product-list';
 import Container from '@/components/ui/container';
 import CustomerReviews from '@/sections/customer-reviews';
 import HeroSection from '@/sections/hero-section';
+import LocationSection from '@/sections/location';
+import Services from '@/sections/our-services';
 import Subscribe from '@/sections/subscribe-newsletter';
+
 
 export const revalidate = 0;
 
@@ -20,6 +23,7 @@ const HomePage = async () => {
       <div className='space-y-10 pb-10'>
         {/* Hero Section */}
         <HeroSection />
+        
         {/* Featured Section */}
         <div className='flex flex-col gap-y-8 px-4 sm:px-6 lg:px-8 text-center '>
           <ProductList
@@ -27,8 +31,10 @@ const HomePage = async () => {
             items={products}
           />
         </div>
+        <Services />
         <CustomerReviews />
         <Subscribe />
+<LocationSection />
       </div>
     </Container>
   );
