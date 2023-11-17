@@ -13,7 +13,7 @@ const LocationSection = (props: Props) => {
       <Container>
         <div className='flex flex-row w-full h-fit pt-10'>
             {/* Left */}
-          <div className='flex-1'>
+          <div className='flex-1 text-center'>
             <div className='flex-1'>
               <h1 className='text-2xl font-semibold'>Colonial Jewelery & Pawn</h1>
               <p>2805 Highway 44 W Inverness, FL 34453</p>
